@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView btnEditProfil;
     TextView tvNama, tvUsername, tvBio, tvPostCount;
-    ImageView ivProfilePic, ivBottomProfilePic, ivAddPost, btnHome;
+    ImageView ivProfilePic, ivBottomProfilePic, ivAddPost, btnHome, iconMenu;
     Uri currentImageUri;
     RecyclerView rvProfileGrid, rvHighlights;
     ProfileGridAdapter gridAdapter;
@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                             ivBottomProfilePic.setImageURI(currentImageUri);
                         }
                         
-                        // Sync username for all posts by this user
                         syncUserPosts(tvUsername.getText().toString());
                     }
                 }
@@ -99,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         ivBottomProfilePic = findViewById(R.id.iv_bottom_profile_pic);
         ivAddPost = findViewById(R.id.icon_plus);
         btnHome = findViewById(R.id.btn_home);
+        iconMenu = findViewById(R.id.icon_menu);
         rvProfileGrid = findViewById(R.id.rvProfileGrid);
         rvHighlights = findViewById(R.id.rvHighlights);
 
@@ -124,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        iconMenu.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+        });
+
         // Setup Highlights
         rvHighlights.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         HighlightAdapter highlightAdapter = new HighlightAdapter(this, DataDummy.getHighlights());
@@ -145,11 +149,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void syncUserPosts(String newUsername) {
-        // Since Post objects might be shared or need update
-        // We ensure profile posts match the current username
-        for (Post post : DataDummy.getProfilePosts()) {
-             // In a real app we'd update the object. Here we'll just assume 
-             // future posts use the new username.
-        }
+        // Implementation for syncing user posts
     }
 }

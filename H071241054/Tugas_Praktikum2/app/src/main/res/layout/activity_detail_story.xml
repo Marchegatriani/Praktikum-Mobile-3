@@ -34,6 +34,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="20dp"
         android:src="@drawable/plus"
-        android:rotation="45" app:tint="#FFFFFF" />
+        android:rotation="45"
+        app:tint="#FFFFFF" />
 
 </RelativeLayout>

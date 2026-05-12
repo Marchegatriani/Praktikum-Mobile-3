@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="16dp">
+    android:paddingBottom="16dp"
+    android:background="?android:attr/colorBackground">
 
     <LinearLayout
         android:id="@+id/layoutHeader"
@@ -30,7 +31,7 @@
             android:layout_marginStart="10dp"
             android:text="username"
             android:textStyle="bold"
-            android:textColor="@android:color/white" />
+            android:textColor="?android:attr/textColorPrimary" />
     </LinearLayout>
 
     <ImageView
@@ -46,6 +47,6 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="Ini adalah contoh caption..."
-        android:textColor="@android:color/white" />
+        android:textColor="?android:attr/textColorPrimary" />
 
 </LinearLayout>

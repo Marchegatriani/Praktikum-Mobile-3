@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:textSize="12sp"
-        android:textColor="#FFFFFF"
+        android:textColor="?android:attr/textColorPrimary"
         tools:text="Highlight Title" />
 
 </LinearLayout>

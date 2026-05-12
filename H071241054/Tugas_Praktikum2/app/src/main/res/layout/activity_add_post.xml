@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#121212"
+    android:background="?android:attr/colorBackground"
     android:padding="16dp"
     tools:context=".AddPostActivity">
 
@@ -20,7 +20,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/back"
-            app:tint="#FFFFFF"
+            app:tint="?android:attr/textColorPrimary"
             android:padding="4dp"
             android:clickable="true"
             android:focusable="true"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Postingan Baru"
-            android:textColor="#FFFFFF"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -54,7 +54,7 @@
         android:id="@+id/layout_select_image"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:background="#262626"
+        android:background="?attr/colorSurfaceVariant"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground">
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:scaleType="center"
             android:src="@drawable/plus"
-            app:tint="#555555"
+            app:tint="?android:attr/textColorSecondary"
             android:contentDescription="Pratinjau Foto" />
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:text="Ketuk untuk memilih foto"
-            android:textColor="#A8A8A8"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"
             android:clickable="false"
             android:focusable="false" />
@@ -89,8 +89,8 @@
         android:layout_marginTop="24dp"
         android:background="@android:color/transparent"
         android:hint="Tulis keterangan..."
-        android:textColor="#FFFFFF"
-        android:textColorHint="#A8A8A8"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorSecondary"
         android:textSize="14sp"
         android:minHeight="100dp"
         android:gravity="top"
